@@ -212,7 +212,7 @@ public class UserServiceMockBeanTest {
 }
 ```
 
-这里需要注意的是，Spring test 默认会重用 bean。如果 A 测试使用 mock 对象进行测试，而 B 测试使用原有的相同类型对象进行测试，B 测试在 A 测试之后运行，那么 B 测试拿到的对象是 mock 的对象。一般这种情况是不期望的，所以需要用 @DirtiesContext 修饰上面的测试避免这个问题。
+最后，这里需要注意的是，Spring test 默认会重用 bean。如果 A 测试使用 mock 对象进行测试，而 B 测试使用原有的相同类型对象进行测试，B 测试在 A 测试之后运行，那么 B 测试拿到的对象是 mock 的对象。一般这种情况是不期望的，所以需要用 @DirtiesContext 修饰上面的测试避免这个问题。
 
 
 
